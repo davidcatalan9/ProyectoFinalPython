@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Cursos {% endblock titulo %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <h2>Listado de Cursos</h2>
+    </div>
+    <div class="table-responsive-md">
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Camada</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cursos %}
+                <tr class="">
+                    <td>{{ item.id }}</td>
+
+                    {% if user.is_authenticated %}
+                        <td>
+                            <a href="{% url 'cursos:detalleCurso' item.id %}" class="btn btn-outline-success btn-sm">{{ item.nombre }}</a>
+                        </td>
+                    {% else %}
+                        <td>{{ item.nombre }}</td>
+                    <!-- <button class="btn btn-outlander-secondary" type="button" disabled>{{ item.nombre }}</button> -->
+                    <td>
+                        {% endif %}
+
+
+                    <td>{{ item.camada }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer text-muted">
+        <a class="btn btn-success" href="#" role="button">Agregar</a>
+        <a class="btn btn-primary" href="{% url 'inicio' %}" role="button">Volver</a>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}

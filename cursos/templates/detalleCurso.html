@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Cursos {% endblock titulo %} 
+
+{% block content %}
+
+<div class="card">
+  <div class="card-header">
+    <h2>Detalle Curso: {{ curso.id }} </h2>
+  </div>
+  <div class="card-body">
+      <p>Nombre: {{ curso.nombre }}</p>
+      <p>Camada: {{ curso.camada }}</p>
+  </div>
+  <div class="card-footer text-muted">
+    Volver 
+  </div>
+</div>
+
+
+{% endblock content %}

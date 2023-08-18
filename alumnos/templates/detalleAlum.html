@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block titulo %} Alumnos {% endblock titulo %} 
+{% block content %}
+
+<div class="card">
+   <div class="card-header">
+      <h3>Detalle Alumno: {{ alumnos.nombre }}</h3>
+      
+   </div>
+   <div class="card-body">
+      {% comment %} <h4 class="card-title"></h4> {% endcomment %}
+      
+      <p class="card-text">Apellido: {{ alumnos.apellido }}</p>
+      <p class="card-text" >R.U.T.: {{ alumnos.rut }}</p>
+      <p class="card-text">Direccion: {{ alumnos.direccion }}</p>
+   </div>
+   <div class="card-footer text-muted">
+      <a href="{% url 'alumnos:index' %}">Volver</a>
+   </div>
+</div>
+<div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+{
+    "cSpell.words": [
+        "alumn",
+        "Alumnos",
+        "Alumnosd",
+        "apellido",
+        "ciudad",
+        "creacion",
+        "cursos",
+        "detalle",
+        "formulario",
+        "inicio",
+        "lista",
+        "modifica",
+        "modificar",
+        "nombre",
+        "profesion",
+        "Profesor"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "none",
+    "workbench.tree.indent": 20,
+    "workbench.view.alwaysShowHeaderActions": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "window.autoDetectColorScheme": true
+}

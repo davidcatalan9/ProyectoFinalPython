@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form 
+    
+        action="{% url 'profesor:formulario' %}" 
+        method='post'>
+        {% csrf_token %}
+        {{ form }}
+    
+    <input type="submit" value="[ Grabar Informacion ]"/>
+    <a href="{% url 'profesor:index' %}">[ Cancelar ]</a>
+
+</form>
+     
+
+{% endblock content %}
+ 

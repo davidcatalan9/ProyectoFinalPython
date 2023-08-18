@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block titulo %} Profesores {% endblock%}
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <h2>Listado de Profesores </h2>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Profesion</th>
+                    <th>e-mail</th>
+                    <th>Curso</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <body>
+
+                {% for profesor in profesores %}
+
+                <tr>
+                    <td>
+                        <a href="{% url 'profesor:detalleProf' profesor.id %}"class="btn btn-outline-success btn-sm">
+                            {{profesor.nombre}}
+                        </a>
+                    </td>
+                    <td>{{profesor.apellido}}</td>
+                    <td>{{profesor.profesion}}</td>
+                    <td>{{profesor.email}}</td>
+                    <td>{{profesor.curso}}</td>
+                    <td>
+                        <a class="btn btn-success btn-sm" href="{% url 'profesor:modificaProf' profesor.id %}">Edit</a> 
+                        <a class="btn btn-danger btn-sm" href="#">Eliminar</a> 
+                    </td>
+                </tr>
+
+                {% endfor %}
+
+            </body>
+        </table>
+    </div>
+
+    <div class="card-footer text-muted">
+        <a class="btn btn-success" href="{% url 'profesor:formulario' %}"> Agregar Profesor</a>
+        <a class="btn btn-primary" href="{% url 'inicio' %}">Volver</a>
+        {% comment %} <a class="btn btn-primary btn-sm" href="{% url 'inicio' %}">Volver</a> {% endcomment %}
+    </div>
+
+
+</div>
+
+{%endblock content%}

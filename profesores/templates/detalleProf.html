@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block titulo %} Profesores {% endblock%}
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        Informacion Profesor: <h4>{{profesor.nombre }} {{profesor.apellido }}</h4>
+    </div>
+    <div class="card-body">
+        {% comment %} <h4 class="card-title">profesor:</h4> {% endcomment %}
+        {% comment %} <p class="card-text">Text</p> {% endcomment %}
+        <div>
+            <p>Profesion          : {{profesor.profesion}}</p>
+            <p>E-mail             : {{profesor.email}}</p>
+            <p>Fecha de Nacimiento: {{profesor.fechaNacimiento}}</p>
+            <p>Curso              : {{profesor.curso}}</p>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <a href="{% url 'profesor:index' %}">Volver</a>
+    </div>
+</div>
+{% endblock content %}
