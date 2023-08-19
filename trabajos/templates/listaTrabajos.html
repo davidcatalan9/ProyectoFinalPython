@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="card">
+<div class="card" shadow>
      <div class="card-header">
           <h2>Listado de Entregables</h2>
      </div>
@@ -12,7 +12,7 @@
                <table class="table-primary">
                     {% for trab in trabajos %}
                     <div class="col-4">
-                         <div class="card">
+                         <div class="card shadow">
                               <div class="card-body">
                                    <h5 class="card-title">ID: {{ trab.id }}</h5>
                                    <h4 class="card-title">Nombre: {{ trab.nombre }}</h4>
