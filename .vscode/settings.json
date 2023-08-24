@@ -17,7 +17,8 @@
         "modificar",
         "nombre",
         "profesion",
-        "Profesor"
+        "Profesor",
+        "registro"
     ],
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
