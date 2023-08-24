@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block titulo %} Profesores {% endblock%}
+{% block content %}
+
+<body>
+    <h2>Confirmar eliminación de {{ profesor }}</h2>
+    <p>¿Estás seguro de que deseas eliminar al profesor {{ profesor }}?</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Eliminar</button>
+        <a href="{% url 'profesor:index' %}">Cancelar</a>
+    </form>
+</body>
+
+
+{% endblock content %}

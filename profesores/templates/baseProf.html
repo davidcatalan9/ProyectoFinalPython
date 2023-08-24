@@ -35,7 +35,7 @@
                     <td>{{profesor.curso}}</td>
                     <td>
                         <a class="btn btn-success btn-sm" href="{% url 'profesor:modificaProf' profesor.id %}">Edit</a> 
-                        <a class="btn btn-danger btn-sm" href="#">Eliminar</a> 
+                        <a class="btn btn-danger btn-sm" href="{% url 'profesor:elimina_profesor' profesor.id %}">Eliminar</a> 
                     </td>
                 </tr>
 
